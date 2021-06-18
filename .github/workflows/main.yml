@@ -31,3 +31,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITBOT_EMAIL: <BOT_EMAIL>
           DRY_RUN: false
+
+      - name: Merge pull request
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          from_branch: 'auto-main-*'
+          target_branch: 'main'
+          
